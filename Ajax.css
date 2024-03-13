@@ -1,0 +1,86 @@
+/* styles.css */
+
+/* Resetting default margin and padding */
+body, h1, p, input, table {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+h1 {
+    font-size: 36px;
+    text-align: center;
+    margin: 20px 0;
+   
+}
+
+input[type="text"],
+input[type="password"],
+input[type="submit"] {
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="submit"]:focus {
+    outline: none;
+    border-color: #2e86de; /* Change border color on focus */
+}
+
+input[type="submit"] {
+    background-color: #2e86de;
+    color: #fff;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #1d68a7; /* Darker shade of the button color on hover */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+td {
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+/* Styling for table header */
+th {
+    background-color: #2e86de;
+    color: #fff;
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: left;
+}
+a {
+    text-decoration: none; /* Remove underlines */
+    padding: 10px 20px; /* Add padding */
+    margin: 0 5px; /* Add margin */
+    border-radius: 25px; /* Add border radius */
+    background: linear-gradient(to right, #ff9a9e, #fad0c4); /* Gradient background */
+    color: #fff; /* Text color */
+    font-weight: bold; /* Bold text */
+    border: 2px solid transparent; /* Transparent border */
+    transition: all 0.3s ease; /* Smooth transition for all properties */
+    box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08); /* Box shadow */
+}
+
+a:hover {
+    background: linear-gradient(to right, #ff9a9e, #fad0c4); /* Gradient background on hover */
+    color: #fff; /* Text color on hover */
+    border-color: #ff9a9e; /* Border color on hover */
+    box-shadow: 0 10px 20px rgba(50, 50, 93, 0.1), 0 6px 6px rgba(0, 0, 0, 0.08); /* Box shadow on hover */
+    transform: translateY(-2px); /* Move the link slightly up on hover */
+}

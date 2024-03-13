@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>page1</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='Page2.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <div align="center">
+        <h1>Ихзасаг их сургуулийн ajax вэбд тавтай морил</h1>
+        <a href="calendar.php">My Calendar</a>
+        <a href="page1.html" onclick="makerequest('page1.html', 'hw'); return false;">Оюутан</a> |
+        <a href="page2.html" onclick="makerequest('page2.html', 'hw'); return false;">Багш</a> |
+        <a href="page3.html" onclick="makerequest('page3.html', 'hw'); return false;">сургалтын алба</a> |
+        <a href="page4.html" onclick="makerequest('page4.html', 'hw'); return false;">Холбоо барих</a>
+    
+        <div id="hw">
+
+
+        </div>
+    </div>
+    <div class="med" style="width: 770px; text-align: left;">
+        <h1>Багш нэвтрэх</h1>
+        <table>
+            <tr>
+                <td>Багшийн код</td>
+                <td><input type="text" name="st_code"></td>
+            </tr>
+            <tr>
+                <td>Багшийн нууц үг</td>
+                <td><input type="password" name="st_pass"></td>
+            </tr>
+            
+        </table>
+        <input type="submit" value="login">
+    </div>
+</body>
+</html>

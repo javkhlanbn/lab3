@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Ajax</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='Ajax.css'>
+    <script src='main.js'>
+        var xmlhttp = false;
+        try {
+            xmlhttp = new ActiveXObject("Msxml2.XMLHTTP");
+            alert("microsoft internet explorer");
+        } catch (e) {
+            try {
+                xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+                alert("microsoft internet explorer");
+            } catch (E) {
+                xmlhttp = false;
+            }
+        }
+        if (!xmlhttp && typeof XMLHttpRequest != 'undefined') {
+            xmlhttp = new XMLHttpRequest();
+            alert("microsoft internet explorer");
+        }
+        function makerequest(serverPage, objID) {
+            var obj = document.getElementById(objID);
+            xmlhttp.open("GET", serverPage);
+            xmlhttp.onreadystatechange = function(){
+                if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                    obj.innerHTML = xmlhttp.responseText;
+                }
+            }
+            xmlhttp.send(null);
+        }
+    </script>
+</head>
+<body onload="makerequest ('page1.html','hw')">
+    <div align="center">
+        <h1>Ихзасаг их сургуулийн ajax вэбд тавтай морил</h1>
+        <a href="calendar.php">My Calendar</a>
+        <a href="page1.html" onclick="makerequest('page1.html', 'hw'); return false;">Оюутан</a> |
+        <a href="page2.html" onclick="makerequest('page2.html', 'hw'); return false;">Багш</a> |
+        <a href="page3.html" onclick="makerequest('page3.html', 'hw'); return false;">сургалтын алба</a> |
+        <a href="page4.html" onclick="makerequest('page4.html', 'hw'); return false;">Холбоо барих</a>
+        <div id="hw">
+        </div>
+    </div>
+</body>
+</html>
+
+
